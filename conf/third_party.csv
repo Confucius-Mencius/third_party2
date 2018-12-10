@@ -45,7 +45,7 @@ LIBXML2,libxml2-2.9.8,tar.gz,1,xml2,,1,1,"1，ftp://xmlsoft.org/libxml2/
 2，依赖于libexpat1-dev (ubuntu) [expat-devel (centos)]
 3，依赖于zlib和xz",
 LIGHTTPD,lighttpd-1.4.45,tar.gz,0,,,0,0,http://www.lighttpd.net/,不再更新
-LOG4CPLUS,log4cplus-1.2.1,tar.xz,1,log4cplus,loggingserver,1,1,https://sourceforge.net/projects/log4cplus/,2.0.1版本在程序退出时会core掉，不要使用
+LOG4CPLUS,log4cplus-2.0.2,tar.xz,1,log4cplus,loggingserver,1,1,https://github.com/log4cplus/log4cplus/releases,
 NCURSES,ncurses-6.1,tar.gz,0,,,1,1,http://ftp.gnu.org/gnu/ncurses/,
 READLINE,readline-7.0,tar.gz,0,,,1,1,"1，ftp://ftp.gnu.org/gnu/readline/
 2，依赖于ncurses",

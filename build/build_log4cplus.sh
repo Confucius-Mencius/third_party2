@@ -45,6 +45,7 @@ make clean
 cp -f ${PATCH_DIR}/${LOG4CPLUS_BASENAME}/include/log4cplus/loglevel.h ./include/log4cplus/
 cp -f ${PATCH_DIR}/${LOG4CPLUS_BASENAME}/include/log4cplus/loggingmacros.h ./include/log4cplus/
 cp -f ${PATCH_DIR}/${LOG4CPLUS_BASENAME}/src/loglevel.cxx ./src/
+cp -f ${PATCH_DIR}/${LOG4CPLUS_BASENAME}/src/threads.cxx ./src/
 
 make -j ${LOGIC_CPU_COUNT}
 sudo make install
