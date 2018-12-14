@@ -20,7 +20,6 @@
 
 #include <log4cplus/config.hxx>
 
-#include <iomanip>
 #include <exception>
 #include <ostream>
 #include <cerrno>
@@ -113,7 +112,7 @@ getCurrentThreadName()
     if (LOG4CPLUS_UNLIKELY (name.empty ()))
     {
         log4cplus::tostringstream tmp;
-        tmp << std::hex << std::showbase << setiosflags(std::ios::uppercase) << impl::getCurrentThreadId ();
+        tmp << std::hex << std::showbase << impl::getCurrentThreadId ();
         name = tmp.str ();
     }
 #else
