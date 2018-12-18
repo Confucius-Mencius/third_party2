@@ -2195,7 +2195,7 @@ evbuffer_expand(struct evbuffer *buf, size_t datlen)
 #endif
 #define NUM_READ_IOVEC 4
 
-#define EVBUFFER_MAX_READ	524288 // chang 4096 to 524288 by hgc
+#define EVBUFFER_MAX_READ	16384 // chang 4096 to 16384 by hgc
 
 /** Helper function to figure out which space to use for reading data into
     an evbuffer.  Internal use only.
