@@ -16,9 +16,13 @@ cd ${FFMPEG_SRC_DIR}
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared
+    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree \
+        --extra-cflags="-I${FDK_AAC_INSTALL_DIR}/include -I${X264_INSTALL_DIR}/include" \
+        --extra-ldflags="-L${FDK_AAC_INSTALL_DIR}/lib -L${X264_INSTALL_DIR}/lib"
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared
+    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree \
+        --extra-cflags="-I${FDK_AAC_INSTALL_DIR}/include -I${X264_INSTALL_DIR}/include" \
+        --extra-ldflags="-L${FDK_AAC_INSTALL_DIR}/lib -L${X264_INSTALL_DIR}/lib"
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1

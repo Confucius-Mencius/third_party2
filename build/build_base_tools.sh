@@ -85,6 +85,13 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
+    ./build_nasm.sh
+    if [ $? -ne 0 ]; then
+        echo "failed to build nasm"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
     ./build_astyle.sh
     if [ $? -ne 0 ]; then
         echo "failed to build astyle"
