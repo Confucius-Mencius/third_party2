@@ -9,8 +9,8 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 . ${SCRIPT_PATH}/build_type.sh
 . ${SCRIPT_PATH}/common.sh
 
-# 修改EVBUFFER_MAX_READ为512k，提高读性能
-EVBUFFER_MAX_READ_524288=1
+# 修改EVBUFFER_MAX_READ为16k，提高读性能
+EVBUFFER_MAX_READ_16384=1
 
 echo "build libevent..."
 
@@ -35,7 +35,7 @@ make clean
 cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/include/event2/http.h ./include/event2/
 cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/http.c ./
 
-if [ ${EVBUFFER_MAX_READ_524288} -eq 1 ]; then
+if [ ${EVBUFFER_MAX_READ_16384} -eq 1 ]; then
     cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/buffer.c ./
 fi
 
