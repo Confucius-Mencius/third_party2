@@ -443,9 +443,9 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
-    ./build_librtmp.sh $1
+    ./build_rtmpdump.sh $1
     if [ $? -ne 0 ]; then
-        echo "failed to build librtmp"
+        echo "failed to build rtmpdump"
         exit 1
     fi
 

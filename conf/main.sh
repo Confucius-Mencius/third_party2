@@ -20,6 +20,14 @@ python ${SCRIPT_PATH}/main.py ${CSV_FILE_PATH} ${OUTPUT_DIR} ${INSTALL_PREFIX}
 cp -rf ${OUTPUT_DIR}/common_define.sh ${SCRIPT_PATH}/../build/
 cp -rf ${OUTPUT_DIR}/common_define.cmake ${SCRIPT_PATH}/../cmake/
 
-cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../common_component/third_party/
-cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../demo_proj/src/third_party/
-cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../perf_test_proj/src/third_party/
+if [ -d ${SCRIPT_PATH}/../../common_component/third_party ]; then
+    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../common_component/third_party/
+fi
+
+if [ -d ${SCRIPT_PATH}/../../demo_proj/src/third_party ]; then
+    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../demo_proj/src/third_party/
+fi
+
+if [ -d ${SCRIPT_PATH}/../../perf_test_proj/src/third_party ]; then
+    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../perf_test_proj/src/third_party/
+fi

@@ -99,7 +99,7 @@ ASSIMP,assimp-4.1.0,tar.gz,1,assimp,assimp,1,1,https://github.com/assimp/assimp/
 FFMPEG,ffmpeg-4.1,tar.bz2,1,ffmpeg,ffmpeg ffprobe,1,1,http://www.ffmpeg.org/download.html,
 ASTYLE,astyle_3.1,tar.gz,0,,,0,1,https://sourceforge.net/projects/astyle/files/astyle/,
 SPDLOG,spdlog-1.2.1,tar.gz,1,,,1,1,https://github.com/gabime/spdlog/releases,
-LIBRTMP,rtmpdump-2.4,tar.gz,1,rtmp,rtmpdump rtmpgw rtmpsrv rtmpsuck,1,1,"1、git clone git://git.ffmpeg.org/rtmpdump
+RTMPDUMP,rtmpdump-2.4,tar.gz,1,rtmp,rtmpdump rtmpgw rtmpsrv rtmpsuck,1,1,"1、git clone git://git.ffmpeg.org/rtmpdump
 2、http://rtmpdump.mplayerhq.hu/download/",
 SRS,srs-2.0-r5,tar.gz,0,,,0,1,https://github.com/ossrs/srs/releases,
 FDK_AAC,fdk-aac-2.0.0,tar.gz,1,fdk_aac,,1,1,http://www.linuxfromscratch.org/blfs/view/svn/multimedia/fdk-aac.html,
