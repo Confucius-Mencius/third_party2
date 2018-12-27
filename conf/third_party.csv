@@ -2,7 +2,7 @@ key,basename,ext,inc,libs,bin,pack,use,note,inc表示是否生成inc目录指令
 M4,m4-1.4.18,tar.gz,0,,,0,1,http://ftp.gnu.org/gnu/m4/,pack表示是否打包libs和bin
 AUTOCONF,autoconf-2.69,tar.gz,0,,,0,1,"1，http://ftp.gnu.org/gnu/autoconf/
 2，依赖于m4",use表示是否使用
-AUTOMAKE,automake-1.16,tar.gz,0,,,0,1,http://ftp.gnu.org/gnu/automake/,
+AUTOMAKE,automake-1.16.1,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/automake/,
 LIBTOOL,libtool-2.4.6,tar.gz,0,,,0,1,http://ftp.gnu.org/gnu/libtool/,
 HELPTOMAN,help2man-1.47.8,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/help2man/,
 BISON,bison-3.2.2,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/bison/,

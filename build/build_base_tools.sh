@@ -23,6 +23,13 @@ function BuildAll
     echo `date` >build_base_tools_time.txt
 
     cd ${SCRIPT_PATH}
+    ./build_helptoman.sh
+    if [ $? -ne 0 ]; then
+        echo "failed to build helptoman"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
     ./build_m4.sh
     if [ $? -ne 0 ]; then
         echo "failed to build m4"
@@ -46,13 +53,6 @@ function BuildAll
     ./build_libtool.sh
     if [ $? -ne 0 ]; then
         echo "failed to build libtool"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_helptoman.sh
-    if [ $? -ne 0 ]; then
-        echo "failed to build helptoman"
         exit 1
     fi
 

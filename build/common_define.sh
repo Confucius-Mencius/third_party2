@@ -8,7 +8,7 @@ THIRD_PARTY_INSTALL_PREFIX=/opt/third_party/${BUILD_TYPE}
 
 M4_BASENAME=m4-1.4.18
 AUTOCONF_BASENAME=autoconf-2.69
-AUTOMAKE_BASENAME=automake-1.16
+AUTOMAKE_BASENAME=automake-1.16.1
 LIBTOOL_BASENAME=libtool-2.4.6
 HELPTOMAN_BASENAME=help2man-1.47.8
 BISON_BASENAME=bison-3.2.2
@@ -234,9 +234,9 @@ function UnzipAll
         exit 1
     fi
 
-    tar -C ${ARCHIVES_DIR} -xvf ${ARCHIVES_DIR}/${AUTOMAKE_BASENAME}.tar.gz
+    tar -C ${ARCHIVES_DIR} -xvf ${ARCHIVES_DIR}/${AUTOMAKE_BASENAME}.tar.xz
     if [ $? -ne 0 ]; then
-        echo "failed to unzip" ${ARCHIVES_DIR}/${AUTOMAKE_BASENAME}.tar.gz
+        echo "failed to unzip" ${ARCHIVES_DIR}/${AUTOMAKE_BASENAME}.tar.xz
         exit 1
     fi
 

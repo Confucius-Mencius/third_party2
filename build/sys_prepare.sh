@@ -31,12 +31,10 @@ fi
 ###############################################################################
 if [ $(command -v apt-get) ]; then
     apt-get update
-    apt-get install nasm yasm build-essential -y
+    apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
     PACKAGE_LIST="libexpat1-dev lsb-release pkg-config gettext unzip autopoint curl pigz valgrind"
 elif [ $(command -v yum) ]; then
-    yum update
-    yum install nasm yasm -y
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
     PACKAGE_LIST="expat-devel redhat-lsb pkgconfig xz unzip libXt curl pigz valgrind"
