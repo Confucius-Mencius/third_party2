@@ -26,11 +26,11 @@ if [ ! -d ${RTMPDUMP_INSTALL_DIR}/lib ]; then
 fi
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} all
-    sudo make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} install
+    make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} XCFLAGS="-I${ZLIB_INSTALL_DIR}/include -I${OPENSSL_INSTALL_DIR}/include" all
+    sudo make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} XCFLAGS="-I${ZLIB_INSTALL_DIR}/include -I${OPENSSL_INSTALL_DIR}/include" install
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} all
-    sudo make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} install
+    make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} XCFLAGS="-I${ZLIB_INSTALL_DIR}/include -I${OPENSSL_INSTALL_DIR}/include" all
+    sudo make -j ${LOGIC_CPU_COUNT} prefix=${RTMPDUMP_INSTALL_DIR} XCFLAGS="-I${ZLIB_INSTALL_DIR}/include -I${OPENSSL_INSTALL_DIR}/include" install
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1
