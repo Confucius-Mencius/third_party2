@@ -1,9 +1,9 @@
 # third_party
 third party libraries used in Linux server programming
 
-verified in CentOS7/LinuxMint18/Ubuntu16.04 and above
+verified in CentOS 7/LinuxMint 18/Ubuntu 16.04 and above, c++11 needed.
 
-Linux c++服务器开发用到的一些第三方库，包括：boost、openssl、libevent、gflags、gtest等，集中管理这些库的版本更新、编译安装、依赖关系等。目的是提供一套统一的第三方库，开发者不用关心具体是怎么编译的，库之间有什么依赖等。
+Linux c++服务器开发用到的一些第三方库，包括：gflags、gtest、libxml2、log4cplus、libevent、openssl等，集中管理这些库的版本更新、编译安装、依赖关系等。目的是提供一套统一的第三方库，开发者不用关心具体是怎么编译的，以及各个库之间有什么依赖关系等。
 
 在一台机器上编译安装好后，开发机操作系统环境相同时，只需要mount即可，不需要每个开发人员都再编译一遍。[how to mount](doc/howto%20mount.md)
 
