@@ -6,8 +6,8 @@ AUTOMAKE,automake-1.16.1,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/automake/,
 LIBTOOL,libtool-2.4.6,tar.gz,0,,,0,1,http://ftp.gnu.org/gnu/libtool/,
 HELPTOMAN,help2man-1.47.8,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/help2man/,
 BISON,bison-3.2.2,tar.xz,0,,,0,1,http://ftp.gnu.org/gnu/bison/,
-FLEX,flex-2.6.4,tar.gz,0,,,0,1,"1，https://github.com/westes/flex/releases
-2，依赖于help2man和bison",
+FLEX,flex-2.6.3,tar.gz,0,,,0,1,"1，https://github.com/westes/flex/releases
+2，依赖于help2man和bison",flex2.6.4在gcc7.2以上编译失败，待2.6.5修复
 CMAKE,cmake-3.13.0,tar.gz,0,,,0,1,https://cmake.org/download/,
 SCONS,scons-3.0.1,tar.gz,0,,,0,1,http://scons.org/pages/download.html,
 BOOST,boost_1_68_0,tar.bz2,1,boost_system boost_thread boost_filesystem boost_program_options boost_locale,,1,1,1，http://www.boost.org/,

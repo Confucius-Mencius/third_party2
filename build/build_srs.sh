@@ -16,7 +16,7 @@ cd ${SRS_SRC_DIR}/trunk
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${SRS_INSTALL_DIR}
+    CFLAGS=-Wno-implicit-fallthrough ./configure --prefix=${SRS_INSTALL_DIR}
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
     ./configure --prefix=${SRS_INSTALL_DIR}
 else
@@ -30,3 +30,7 @@ cp ./objs/nginx/html/crossdomain.xml ./research/api-server/static-dir/
 
 make -j ${LOGIC_CPU_COUNT}
 sudo make install
+
+# srs installed, to link and start srs:
+sudo ln -sf ${SRS_INSTALL_DIR}/etc/init.d/srs /etc/init.d/srs
+#/etc/init.d/srs start
