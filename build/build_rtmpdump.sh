@@ -13,7 +13,6 @@ echo "build rtmpdump..."
 
 cd ${RTMPDUMP_SRC_DIR}
 
-# 注意：sed双引号中的变量会被替换，单引号不会
 sed -i -e "s!LIBZ=-lz!LIBZ=-L${ZLIB_INSTALL_DIR}/lib -lz!" ${RTMPDUMP_SRC_DIR}/Makefile
 sed -i -e "s!LIBZ=-lz!LIBZ=-L${ZLIB_INSTALL_DIR}/lib -lz!" ${RTMPDUMP_SRC_DIR}/librtmp/Makefile
 

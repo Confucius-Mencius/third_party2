@@ -12,6 +12,7 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 echo "build rapidjson..."
 
 cd ${RAPIDJSON_SRC_DIR}
+
 sed -i -e 's!-Werror!-Wno-implicit-fallthrough!' ${RAPIDJSON_SRC_DIR}/CMakeLists.txt
 
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${RAPIDJSON_INSTALL_DIR} .

@@ -16,7 +16,7 @@ chmod +x ./autogen.sh
 ACLOCAL_PATH=/usr/share/aclocal ./autogen.sh
 
 # 修改${NGINX_SRC_DIR}/auto/cc/conf文件中的ngx_compile_opt，为：ngx_compile_opt="-c -g"，增加调试符号
-sed -i "s/ngx_compile_opt=\"-c\"/ngx_compile_opt=\"-c -g\"/g" ${NGINX_SRC_DIR}/auto/cc/conf
+sed -i -e "s/ngx_compile_opt=\"-c\"/ngx_compile_opt=\"-c -g\"/g" ${NGINX_SRC_DIR}/auto/cc/conf
 
 # https://github.com/yaoweibin/nginx_tcp_proxy_module
 # cd ${NGINX_SRC_DIR}/../
