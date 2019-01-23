@@ -2289,7 +2289,7 @@ evbuffer_read(struct evbuffer *buf, evutil_socket_t fd, int howmuch)
 	}
 
 	n = get_n_bytes_readable_on_socket(fd);
-	if (n <= 0)
+	if (n <= 0 || n > EVBUFFER_MAX_READ)
 		n = EVBUFFER_MAX_READ;
 	if (howmuch < 0 || howmuch > n)
 		howmuch = n;
