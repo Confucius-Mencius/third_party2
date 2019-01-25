@@ -5,8 +5,8 @@
 ###############################################################################
 
 if [ $# != 1 ]; then
-    echo "usage: ${SCRIPT_PATH}/build_type.sh <debug | release>"
-    exit 1
+    echo "Usage: ${SCRIPT_PATH}/build_type.sh <debug|release>"
+    exit 0
 fi
 
 BUILD_TYPE=$1

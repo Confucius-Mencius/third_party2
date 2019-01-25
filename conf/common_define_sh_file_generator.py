@@ -95,7 +95,7 @@ def output_libs_list(fp, xls_head_, xls_row_grid, xls_col_grid, indent):
 
 
 def output_unzip_function(fp, xls_head_, xls_row_grid, xls_col_grid, indent):
-    content = '%sfunction UnzipAll%s%s{' % (indent, os.linesep, indent)
+    content = '%sfunction UnzipAll()%s%s{' % (indent, os.linesep, indent)
     fp.write(content.encode('utf-8'))
 
     for xls_row in xls_row_grid.row_list:

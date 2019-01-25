@@ -7,7 +7,7 @@
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 if [ $# == 0 ]; then
-    echo "usage: ${SCRIPT_PATH}/main.sh <third party install prefix, eg: /opt/third_party >"
+    echo "Usage: ${SCRIPT_PATH}/main.sh <third party install prefix, eg: /opt/third_party>"
     exit 1
 fi
 

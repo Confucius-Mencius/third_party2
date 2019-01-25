@@ -220,7 +220,7 @@ SRC_DIR_LIST=(${M4_SRC_DIR} ${AUTOCONF_SRC_DIR} ${AUTOMAKE_SRC_DIR} ${LIBTOOL_SR
 
 LIB_LIST=(m4 autoconf automake libtool helptoman bison flex cmake scons boost curl zlib xz exiv2 flatbuf free_type gflags glog gtest gperftools hiredis image_magick jemalloc jsoncpp libevent libevhtp libjpeg libmagic libpng libtiff libunwind libuuid libxml2 log4cplus ncurses readline lua libbson mongo_c_driver mongo_cxx_driver msgpack opencc openssl pcre protobuf rapidjson redis snappy swig nginx tengine thrift zookeeper openpgm zeromq udt mysql_client libwebsockets leveldb mupdf assimp ffmpeg astyle spdlog rtmpdump srs fdk_aac x264 nasm)
 
-function UnzipAll
+function UnzipAll()
 {
     tar -C ${ARCHIVES_DIR} -xvf ${ARCHIVES_DIR}/${M4_BASENAME}.tar.gz
     if [ $? -ne 0 ]; then

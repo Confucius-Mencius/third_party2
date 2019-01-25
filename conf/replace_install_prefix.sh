@@ -9,7 +9,7 @@
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 if [ $# != 2 ]; then
-    echo "usage: ./xx.sh <install prefix> <new install prefix>"
+    echo "Usage: ./xx.sh <install prefix> <new install prefix>"
     exit 1
 fi
 
