@@ -45,20 +45,20 @@ sudo python setup.py install
 
 # 拷贝最新版python到测试工程中
 DEMO_PROJ_PY_TEST_DIR=${PROTOBUF_SRC_DIR}/../../../demo_proj/py_test
-PERF_TEST_PROJ_PY_TEST_DIR=${PROTOBUF_SRC_DIR}/../../../perf_test_proj/py_test
+ECHO_PROJ_PY_TEST_DIR=${PROTOBUF_SRC_DIR}/../../../echo_proj/py_test
 
 if [ -d ${DEMO_PROJ_PY_TEST_DIR}/google ]; then
     rm -rf ${DEMO_PROJ_PY_TEST_DIR}/google
 fi
 
-if [ -d ${PERF_TEST_PROJ_PY_TEST_DIR}/google ]; then
-    rm -rf ${PERF_TEST_PROJ_PY_TEST_DIR}/google
+if [ -d ${ECHO_PROJ_PY_TEST_DIR}/google ]; then
+    rm -rf ${ECHO_PROJ_PY_TEST_DIR}/google
 fi
 
 if [ -d ${DEMO_PROJ_PY_TEST_DIR} ]; then
     cp -rf ${PROTOBUF_SRC_DIR}/python/google ${DEMO_PROJ_PY_TEST_DIR}/
 fi
 
-if [ -d ${PERF_TEST_PROJ_PY_TEST_DIR} ]; then
-    cp -rf ${PROTOBUF_SRC_DIR}/python/google ${PERF_TEST_PROJ_PY_TEST_DIR}/
+if [ -d ${ECHO_PROJ_PY_TEST_DIR} ]; then
+    cp -rf ${PROTOBUF_SRC_DIR}/python/google ${ECHO_PROJ_PY_TEST_DIR}/
 fi
