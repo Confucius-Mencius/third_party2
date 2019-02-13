@@ -31,3 +31,8 @@ fi
 make clean
 make -j ${LOGIC_CPU_COUNT}
 sudo make install
+
+# 运行
+# cd /opt/third_party/release/ffmpeg/bin
+# export LD_LIBRARY_PATH=../lib:../../fdk_aac/lib:../../x264/lib
+# ./ffmpeg --help
