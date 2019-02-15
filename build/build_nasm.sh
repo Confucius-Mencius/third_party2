@@ -4,6 +4,8 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
+# X264和FFmpeg使用汇编提高性能。
+
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 . ${SCRIPT_PATH}/common.sh
