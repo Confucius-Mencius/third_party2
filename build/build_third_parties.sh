@@ -1,4 +1,4 @@
-#!/bin/bash
+    bin/bash
 
 ###############################################################################
 # author: BrentHuang (guang11cheng@qq.com)
@@ -453,6 +453,13 @@ function BuildAll
     ./build_srs.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build srs"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
+    ./build_sdl.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build sdl"
         exit 1
     fi
 
