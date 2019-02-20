@@ -436,6 +436,13 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
+    ./build_openh264.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build openh264"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
     ./build_ffmpeg.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build ffmpeg"
