@@ -33,11 +33,12 @@ if [ $(command -v apt-get) ]; then
     apt-get update
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
-    PACKAGE_LIST="texinfo libexpat1-dev lsb-release pkg-config gettext unzip autopoint curl pigz valgrind"
+    PACKAGE_LIST="texinfo libexpat1-dev lsb-release pkg-config gettext unzip autopoint curl pigz valgrind" \
+        "libasound2-dev libpulse-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev"
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
-    PACKAGE_LIST="expat-devel redhat-lsb pkgconfig xz unzip libXt curl pigz valgrind"
+    PACKAGE_LIST="expat-devel redhat-lsb pkgconfig xz unzip libXt curl pigz valgrind alsa-lib-devel"
 else
     echo "not supported os"
     exit 1
