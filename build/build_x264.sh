@@ -16,7 +16,7 @@ cd ${X264_SRC_DIR}
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${X264_INSTALL_DIR} --enable-shared
+    ./configure --prefix=${X264_INSTALL_DIR} --enable-shared --enable-debug
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
     ./configure --prefix=${X264_INSTALL_DIR} --enable-shared
 else
