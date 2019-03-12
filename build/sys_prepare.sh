@@ -34,7 +34,7 @@ if [ $(command -v apt-get) ]; then
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
     PACKAGE_LIST="texinfo libexpat1-dev lsb-release pkg-config gettext unzip autopoint curl pigz valgrind" \
-        "v4l-utils libasound2-dev libpulse-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev"
+        "v4l-utils libv4l-dev libasound2-dev libpulse-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev"
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"

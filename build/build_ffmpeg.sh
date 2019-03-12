@@ -16,12 +16,12 @@ cd ${FFMPEG_SRC_DIR}
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree \
+    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree --enable-libv4l2 \
         --enable-debug=3 --disable-optimizations --disable-asm --disable-stripping \
         --extra-cflags="-I${FDK_AAC_INSTALL_DIR}/include -I${X264_INSTALL_DIR}/include" \
         --extra-ldflags="-L${FDK_AAC_INSTALL_DIR}/lib -L${X264_INSTALL_DIR}/lib"
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree \
+    ./configure --prefix=${FFMPEG_INSTALL_DIR} --enable-shared --enable-libx264 --enable-gpl --enable-libfdk-aac --enable-nonfree --enable-libv4l2 \
         --extra-cflags="-I${FDK_AAC_INSTALL_DIR}/include -I${X264_INSTALL_DIR}/include" \
         --extra-ldflags="-L${FDK_AAC_INSTALL_DIR}/lib -L${X264_INSTALL_DIR}/lib"
 else
