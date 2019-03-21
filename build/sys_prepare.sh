@@ -30,7 +30,7 @@ fi
 
 ###############################################################################
 if [ $(command -v apt-get) ]; then
-    apt-get update
+    apt-get update # 如果是开发机，可以随便升级；如果是线上服务器，不要随便升级（注释掉）
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
     PACKAGE_LIST="texinfo libexpat1-dev lsb-release pkg-config gettext unzip autopoint curl pigz valgrind" \
