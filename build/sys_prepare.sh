@@ -38,7 +38,7 @@ if [ $(command -v apt-get) ]; then
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
-    PACKAGE_LIST="expat-devel redhat-lsb pkgconfig xz unzip libXt curl pigz valgrind alsa-lib-devel"
+    PACKAGE_LIST="texinfo expat-devel redhat-lsb pkgconfig xz unzip libXt curl pigz valgrind alsa-lib-devel"
 else
     echo "not supported os"
     exit 1
