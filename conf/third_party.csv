@@ -92,7 +92,8 @@ MYSQL_CLIENT,mysql-5.6.40,tar.gz,1,mysqlclient,,1,1,"1，https://dev.mysql.com/d
 JANSSON,jansson-2.10,tar.gz,1,jansson,,1,0,https://github.com/akheron/jansson/releases,不再更新
 JSON2PB,json2pb-master,zip,1,json2pb,,1,0,https://github.com/shramov/json2pb,不再更新
 LIBWEBSOCKETS,libwebsockets-3.1.0,tar.gz,1,websockets,,1,1,"1，https://github.com/warmcat/libwebsockets/releases
-2，依赖于libevent、openssl、zlib",
+2，依赖于libevent、openssl、zlib
+3，这个库bug比较多，不能用",
 LEVELDB,leveldb-1.20,tar.gz,1,leveldb,,1,1,https://github.com/google/leveldb/releases,
 MUPDF,mupdf-1.14.0-source,tar.xz,1,mupdf,mupdf-gl mupdf-x11 mutool,1,1,https://www.mupdf.com/downloads/index.html,
 ASSIMP,assimp-4.1.0,tar.gz,1,assimp,assimp,1,1,https://github.com/assimp/assimp/releases,
