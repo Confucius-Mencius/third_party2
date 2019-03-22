@@ -31,7 +31,7 @@ common_define.cmake是根据conf目录的配置自动生成的cmake文件，thir
 third_party.csv: 第三方库版本配置文件。将第三方库的配置写在这个csv文件中，脚本处理这个文件自动生成cmake、shell、makefile等公共文件。
 
 
-当第三方库有版本更新时，修改csv文件中的条目，然后运行"main.sh /opt/third_party"。其中/opt/third_party是install prefix，可以根据实际情况指定。
+当更新第三方库的版本时，修改csv文件中的条目，然后运行"main.sh /opt/third_party"。其中/opt/third_party是install prefix，可以根据实际情况指定。
 
 添加第三方库xxx时，也需要运行"main.sh /opt/third_party"。然后在build目录下增加一个build_xxx.sh脚本，在build_third_parties.sh文件中增加编译该库的一个条目。
 
