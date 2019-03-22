@@ -13,10 +13,12 @@ echo "build libwebsockets..."
 
 cd ${LIBWEBSOCKETS_SRC_DIR}
 
+cp -f ${PATCH_DIR}/${LIBWEBSOCKETS_BASENAME}/minimal-examples/http-server/minimal-http-server-eventlib-foreign/CMakeLists.txt ./minimal-examples/http-server/minimal-http-server-eventlib-foreign/CMakeLists.txt
+
 mkdir build
 cd build
 
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${LIBWEBSOCKETS_INSTALL_DIR} -DLIB_SUFFIX=64 \
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${LIBWEBSOCKETS_INSTALL_DIR} -DLIB_SUFFIX=64 -DLWS_MAX_SMP=256 \
     -DLWS_WITH_LIBEVENT=ON -DLWS_UNIX_SOCK=ON -DLWS_WITH_HTTP2=ON -DLWS_WITH_MINIMAL_EXAMPLES=ON \
     -DLWS_ZLIB_INCLUDE_DIRS=${ZLIB_INSTALL_DIR}/include \
     -DLWS_ZLIB_LIBRARIES="${ZLIB_INSTALL_DIR}/lib/libz.so" \
