@@ -24,10 +24,6 @@ if [ -d ${SCRIPT_PATH}/../../common_component/third_party ]; then
     cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../common_component/third_party/
 fi
 
-if [ -d ${SCRIPT_PATH}/../../echo_proj/src/third_party ]; then
-    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../echo_proj/src/third_party/
-fi
-
-if [ -d ${SCRIPT_PATH}/../../perf_test_proj/src/third_party ]; then
-    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../perf_test_proj/src/third_party/
+if [ -d ${SCRIPT_PATH}/../../demo_proj/src/third_party ]; then
+    cp -rf ${SCRIPT_PATH}/../cmake ${SCRIPT_PATH}/../../demo_proj/src/third_party/
 fi
