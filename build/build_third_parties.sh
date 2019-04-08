@@ -477,6 +477,13 @@ function BuildAll
         exit 1
     fi
 
+    cd ${SCRIPT_PATH}
+    ./build_http_parser.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build http parser"
+        exit 1
+    fi
+
     echo `date` >>build_third_parties_time.txt
 }
 
