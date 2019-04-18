@@ -6,13 +6,7 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-. ${SCRIPT_PATH}/common.sh
-
-for i in ${SRC_DIR_LIST[@]}; do
-    rm -rf ${i}
-done
-
-rm -rf ${ARCHIVES_DIR}/tmp
-
-# 删除当前目录中的子目录
-# find . -maxdepth 1 -type d | xargs sudo rm -rf
+# 删除当前目录中的子目录. -path '*/*'可以忽略.和..
+cd ${SCRIPT_PATH}/../archives
+find . -maxdepth 1 -type d -path '*/*' | xargs sudo rm -rf
+cd ${SCRIPT_PATH}
