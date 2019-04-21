@@ -33,7 +33,8 @@ LIBEVENT,libevent-2.1.8-stable,tar.gz,1,event_core event_extra event_pthreads,,1
 LIBJPEG,jpegsrc.v9c,tar.gz,1,jpeg,,1,1,http://www.ijg.org/files/,
 LIBMAGIC,libmagic-5.18,tar.gz,1,magic,,1,1,https://github.com/threatstack/libmagic/releases,
 LIBPNG,libpng-1.6.36,tar.xz,1,png,,1,1,"1，http://www.libpng.org/pub/png/libpng.html
-2，依赖于zlib",
+2，https://sourceforge.net/projects/libpng/files/
+3，依赖于zlib",
 LIBTIFF,libtiff-Release-v4-0-9,tar.gz,1,tiff,,1,1,https://github.com/vadz/libtiff/releases,
 LIBUNWIND,libunwind-1.3.1,tar.gz,1,unwind,,1,1,http://download.savannah.gnu.org/releases/libunwind/,
 LIBUUID,libuuid-1.0.3,tar.gz,1,uuid,,1,1,https://sourceforge.net/projects/libuuid/,
@@ -86,7 +87,7 @@ ASTYLE,astyle_3.1,tar.gz,0,,,0,1,https://sourceforge.net/projects/astyle/files/a
 SPDLOG,spdlog-1.3.1,tar.gz,1,,,1,1,https://github.com/gabime/spdlog/releases,
 RTMPDUMP,rtmpdump-2.4,tar.gz,1,rtmp,rtmpdump rtmpgw rtmpsrv rtmpsuck,1,1,"1、http://rtmpdump.mplayerhq.hu/
 2、git clone git://git.ffmpeg.org/rtmpdump",
-SRS,srs-2.0-r6,tar.gz,0,,,0,1,https://github.com/ossrs/srs/releases,
+SRS,srs-2.0-r5,tar.gz,0,,,0,1,https://github.com/ossrs/srs/releases,
 FDK_AAC,fdk-aac-2.0.0,tar.gz,1,fdk_aac,,1,1,http://www.linuxfromscratch.org/blfs/view/svn/multimedia/fdk-aac.html,
 X264,x264,tar.bz2,1,x264,,1,1,https://www.videolan.org/developers/x264.html,
 NASM,nasm-2.14.02,tar.xz,0,,,0,1,https://www.nasm.us/,

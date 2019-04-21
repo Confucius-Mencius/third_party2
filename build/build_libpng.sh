@@ -17,8 +17,7 @@ cd ${LIBPNG_SRC_DIR}
 # CFLAGS="-I${ZLIB_INSTALL_DIR}/include" LDFLAGS="-L${ZLIB_INSTALL_DIR}/lib" ./configure --prefix=${LIBPNG_INSTALL_DIR}
 
 # 原始的makefile.linux在scripts目录下
-
-cp -f ${PATCH_DIR}/${LIBPNG_BASENAME}/makefile.linux ./
+cp -f ./scripts/makefile.linux ./
 
 make clean
 
