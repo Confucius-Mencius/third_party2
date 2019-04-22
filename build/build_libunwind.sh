@@ -16,7 +16,7 @@ cd ${LIBUNWIND_SRC_DIR}
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${LIBUNWIND_INSTALL_DIR}
+    ./configure --prefix=${LIBUNWIND_INSTALL_DIR} --enable-debug
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
     ./configure --prefix=${LIBUNWIND_INSTALL_DIR}
 else

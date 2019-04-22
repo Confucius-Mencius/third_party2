@@ -13,16 +13,7 @@ echo "build exiv2..."
 
 cd ${EXIV2_SRC_DIR}
 
-chmod +x ./configure
-
-if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    CXXFLAGS="-g -ggdb -O0" ./configure --prefix=${EXIV2_INSTALL_DIR} --disable-xmp --with-zlib=${ZLIB_INSTALL_DIR}
-elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    CXXFLAGS="-g -ggdb -O2" ./configure --prefix=${EXIV2_INSTALL_DIR} --disable-xmp --with-zlib=${ZLIB_INSTALL_DIR}
-else
-    echo "not supported build type: " ${BUILD_TYPE}
-    exit 1
-fi
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${EXIV2_INSTALL_DIR} .
 
 make clean
 make -j ${LOGIC_CPU_COUNT}

@@ -13,16 +13,7 @@ echo "build glog..."
 
 cd ${GLOG_SRC_DIR}
 
-chmod +x ./configure
-
-if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${GLOG_INSTALL_DIR}
-elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    ./configure --prefix=${GLOG_INSTALL_DIR}
-else
-    echo "not supported build type: " ${BUILD_TYPE}
-    exit 1
-fi
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${GLOG_INSTALL_DIR} .
 
 make clean
 make -j ${LOGIC_CPU_COUNT}

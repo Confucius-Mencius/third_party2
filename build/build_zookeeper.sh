@@ -11,7 +11,7 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 echo "build zookeeper..."
 
-cd ${ZOOKEEPER_SRC_DIR}/src/c
+cd ${ZOOKEEPER_SRC_DIR}/zookeeper-client/zookeeper-client-c/
 
 chmod +x ./configure
 

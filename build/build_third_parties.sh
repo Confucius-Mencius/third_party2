@@ -1,5 +1,3 @@
-    bin/bash
-
 ###############################################################################
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
@@ -170,12 +168,6 @@ function BuildAll
         exit 1
     fi
 
-    ./build_libevhtp.sh $1 # 依赖libevent
-    if [ $? -ne 0 ]; then
-        echo "failed to build libevhtp"
-        exit 1
-    fi
-
     cd ${SCRIPT_PATH}
     ./build_libmagic.sh $1
     if [ $? -ne 0 ]; then
@@ -235,21 +227,6 @@ function BuildAll
             exit 1
         fi
     fi
-    
-    cd ${SCRIPT_PATH}
-    ./build_thrift.sh $1 # 依赖openssl boost libevent
-    if [ $? -ne 0 ]; then
-       echo "failed to build thrift"
-       exit 1
-    fi
-
-    # deprecated
-    # cd ${SCRIPT_PATH}
-    # ./build_mongo_cxx_driver_legacy.sh $1
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build mongo cxx driver legacy"
-    #     exit 1
-    # fi
 
     cd ${SCRIPT_PATH}
     ./build_libbson.sh $1
@@ -318,14 +295,6 @@ function BuildAll
         exit 1
     fi
 
-    # deprecated
-    # cd ${SCRIPT_PATH}
-    # ./build_toluapp.sh $1
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build toluapp"
-    #     exit 1
-    # fi
-
     cd ${SCRIPT_PATH}
     ./build_swig.sh $1
     if [ $? -ne 0 ]; then
@@ -358,27 +327,6 @@ function BuildAll
         exit 1
     fi
 
-    # cd ${SCRIPT_PATH}
-    # ./build_lighttpd.sh $1 # 依赖openssl
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build lighttpd"
-    #     exit 1
-    # fi
-
-    # cd ${SCRIPT_PATH}
-    # ./build_spawn_fcgi.sh $1
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build spawn fcgi"
-    #     exit 1
-    # fi
-
-    # cd ${SCRIPT_PATH}
-    # ./build_fcgi.sh $1
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build fcgi"
-    #     exit 1
-    # fi
-
     cd ${SCRIPT_PATH}
     ./build_mysql_client.sh $1
     if [ $? -ne 0 ]; then
@@ -394,25 +342,11 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
-    ./build_libwebsockets.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libwebsockets"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
     ./build_leveldb.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build leveldb"
         exit 1
     fi
-
-    # cd ${SCRIPT_PATH}
-    # ./build_mupdf.sh $1
-    # if [ $? -ne 0 ]; then
-    #     echo "failed to build mupdf"
-    #     exit 1
-    # fi
 
     cd ${SCRIPT_PATH}
     ./build_assimp.sh $1
