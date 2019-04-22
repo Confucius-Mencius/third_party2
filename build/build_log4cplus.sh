@@ -8,7 +8,6 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 . ${SCRIPT_PATH}/build_type.sh
 . ${SCRIPT_PATH}/common.sh
-. ${SCRIPT_PATH}/../../sh_tools/base/version_compare.sh
 
 echo "build log4cplus..."
 
@@ -16,25 +15,10 @@ cd ${LOG4CPLUS_SRC_DIR}
 
 chmod +x ./configure
 
-GCC_VERSION=`gcc -v 2>&1 | tail -1 | awk '{print $3}'` # cat /proc/version | awk '{printf substr($7,1,5)}'
-VERSION="4.8.1"
-
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    if version_ge ${GCC_VERSION} ${VERSION}; then
-        echo "${GCC_VERSION} is >= ${VERSION}"
-        ./configure --prefix=${LOG4CPLUS_INSTALL_DIR} --enable-debugging CXXFLAGS="-std=c++11"
-    else
-        echo "${GCC_VERSION} is < ${VERSION}"
-        ./configure --prefix=${LOG4CPLUS_INSTALL_DIR}
-    fi
+    ./configure --prefix=${LOG4CPLUS_INSTALL_DIR} --enable-shared=yes --enable-static=no --with-python=no CXXFLAGS="-std=c++11"
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    if version_ge ${GCC_VERSION} ${VERSION}; then
-        echo "${GCC_VERSION} is >= ${VERSION}"
-        ./configure --prefix=${LOG4CPLUS_INSTALL_DIR} CXXFLAGS="-std=c++11"
-    else
-        echo "${GCC_VERSION} is < ${VERSION}"
-        ./configure --prefix=${LOG4CPLUS_INSTALL_DIR}
-    fi
+    ./configure --prefix=${LOG4CPLUS_INSTALL_DIR} --enable-shared=yes --enable-static=no --with-python=no CXXFLAGS="-std=c++11"
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1
