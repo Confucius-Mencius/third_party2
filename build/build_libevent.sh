@@ -32,8 +32,8 @@ fi
 
 make clean
 
-# cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/include/event2/http.h ./include/event2/
-# cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/http.c ./
+cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/include/event2/http.h ./include/event2/
+cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/http.c ./
 
 if [ ${EVBUFFER_MAX_READ_16384} -eq 1 ]; then
     cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/buffer.c ./
