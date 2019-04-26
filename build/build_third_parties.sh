@@ -421,4 +421,4 @@ function BuildAll
     echo `date` >>build_third_parties_time.txt
 }
 
-BuildAll ${BUILD_TYPE} 2>build_third_parties.err
+BuildAll ${BUILD_TYPE} 2>build_third_parties.error.log
