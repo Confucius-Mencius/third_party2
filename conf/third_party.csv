@@ -28,7 +28,7 @@ HIREDIS,hiredis-0.14.0,tar.gz,1,hiredis,,1,1,https://github.com/redis/hiredis/re
 IMAGE_MAGICK,ImageMagick-7.0.8-40,tar.xz,1,MagickWand-6.Q16 Magick++-6.Q16 MagickCore-6.Q16,,1,1,https://www.imagemagick.org/download/releases/,
 JEMALLOC,jemalloc-5.2.0,tar.gz,0,,,0,1,https://github.com/jemalloc/jemalloc/releases,
 JSONCPP,jsoncpp-1.8.4,tar.gz,1,jsoncpp,,1,1,https://github.com/open-source-parsers/jsoncpp/releases,
-LIBEVENT,libevent-2.1.8-stable,tar.gz,1,event_core event_extra event_pthreads,,1,1,"1，http://libevent.org/
+LIBEVENT,libevent-2.1.8-stable,tar.gz,1,event_core event_extra event_pthreads event_openssl,,1,1,"1，http://libevent.org/
 2，依赖于openssl",
 LIBJPEG,jpegsrc.v9c,tar.gz,1,jpeg,,1,1,http://www.ijg.org/files/,
 LIBMAGIC,libmagic-5.18,tar.gz,1,magic,,1,1,https://github.com/threatstack/libmagic/releases,
