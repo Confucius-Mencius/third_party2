@@ -50,3 +50,7 @@ third_party.csv: 第三方库版本配置文件。将第三方库的配置写在
 ## TODO
 
 梳理每个库的debug编译和release编译，对程序性能有影响。
+
+不再编译系统自带的一些基础库，梳理sysprepare、build base tools
+
+将build base tools改为build tools，将build third parties拆分为build framework libs和buils extra libs两个脚本，根据需要减少编译时间。

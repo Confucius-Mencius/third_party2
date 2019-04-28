@@ -101,4 +101,4 @@ function BuildAll
     echo `date` >>build_base_tools_time.txt
 }
 
-BuildAll 2>build_base_tools.err
+BuildAll 2>build_base_tools.error.log

@@ -16,9 +16,11 @@ cd ${LIBTIFF_SRC_DIR}
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    ./configure --prefix=${LIBTIFF_INSTALL_DIR} --with-jpeg-include-dir=${LIBJPEG_INSTALL_DIR}/include --with-jpeg-lib-dir=${LIBJPEG_INSTALL_DIR}/lib
+    ./configure --prefix=${LIBTIFF_INSTALL_DIR} --with-jpeg-include-dir=${LIBJPEG_INSTALL_DIR}/include --with-jpeg-lib-dir=${LIBJPEG_INSTALL_DIR}/lib \
+         --with-zlib-include-dir=${ZLIB_INSTALL_DIR}/include --with-zlib-lib-dir=${ZLIB_INSTALL_DIR}/lib
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    ./configure --prefix=${LIBTIFF_INSTALL_DIR} --with-jpeg-include-dir=${LIBJPEG_INSTALL_DIR}/include --with-jpeg-lib-dir=${LIBJPEG_INSTALL_DIR}/lib
+    ./configure --prefix=${LIBTIFF_INSTALL_DIR} --with-jpeg-include-dir=${LIBJPEG_INSTALL_DIR}/include --with-jpeg-lib-dir=${LIBJPEG_INSTALL_DIR}/lib \
+        --with-zlib-include-dir=${ZLIB_INSTALL_DIR}/include --with-zlib-lib-dir=${ZLIB_INSTALL_DIR}/lib
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1
