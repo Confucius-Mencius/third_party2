@@ -50,6 +50,13 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
+    ./build_libpng.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build libpng"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
     ./build_freetype.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build freetype"
@@ -123,13 +130,6 @@ function BuildAll
     ./build_libjpeg.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build libjpeg"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_libpng.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libpng"
         exit 1
     fi
 
