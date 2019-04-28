@@ -140,12 +140,12 @@ function BuildAll
         exit 1
     fi
 
-    cd ${SCRIPT_PATH}
-    ./build_image_magick.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build image magick"
-        exit 1
-    fi
+    # cd ${SCRIPT_PATH}
+    # ./build_image_magick.sh $1
+    # if [ $? -ne 0 ]; then
+    #     echo "failed to build image magick"
+    #     exit 1
+    # fi
 
     cd ${SCRIPT_PATH}
     ./build_rapidjson.sh $1

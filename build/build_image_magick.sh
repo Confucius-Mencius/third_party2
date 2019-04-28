@@ -17,11 +17,11 @@ chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
     ./configure --prefix=${IMAGE_MAGICK_INSTALL_DIR} \
-        PKG_CONFIG_PATH=${LIBXML2_INSTALL_DIR}/lib/pkgconfig:${LIBPNG_INSTALL_DIR}/lib/pkgconfig:${LIBTIFF_INSTALL_DIR}/lib/pkgconfig:${LIBJPEG_INSTALL_DIR}/lib/pkgconfig:${FREE_TYPE_INSTALL_DIR}/lib/pkgconfig:${ZLIB_INSTALL_DIR}/lib/pkgconfig \
+        PKG_CONFIG_PATH=${LIBXML2_INSTALL_DIR}/lib/pkgconfig:${LIBPNG_INSTALL_DIR}/lib/pkgconfig:${LIBTIFF_INSTALL_DIR}/lib/pkgconfig:${LIBJPEG_INSTALL_DIR}/lib/pkgconfig:${FREETYPE_INSTALL_DIR}/lib/pkgconfig:${ZLIB_INSTALL_DIR}/lib/pkgconfig \
         CFLAGS="-O0"
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
     ./configure --prefix=${IMAGE_MAGICK_INSTALL_DIR} \
-        PKG_CONFIG_PATH=${LIBXML2_INSTALL_DIR}/lib/pkgconfig:${LIBPNG_INSTALL_DIR}/lib/pkgconfig:${LIBTIFF_INSTALL_DIR}/lib/pkgconfig:${LIBJPEG_INSTALL_DIR}/lib/pkgconfig:${FREE_TYPE_INSTALL_DIR}/lib/pkgconfig:${ZLIB_INSTALL_DIR}/lib/pkgconfig
+        PKG_CONFIG_PATH=${LIBXML2_INSTALL_DIR}/lib/pkgconfig:${LIBPNG_INSTALL_DIR}/lib/pkgconfig:${LIBTIFF_INSTALL_DIR}/lib/pkgconfig:${LIBJPEG_INSTALL_DIR}/lib/pkgconfig:${FREETYPE_INSTALL_DIR}/lib/pkgconfig:${ZLIB_INSTALL_DIR}/lib/pkgconfig
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1
